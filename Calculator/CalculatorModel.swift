@@ -13,7 +13,6 @@ class CalculatorModel {
     var a: Int!
     var b: Int!
 
-
     func add(_ a: Int, _ b: Int) -> Int {
         return a + b
     }
@@ -33,5 +32,4 @@ class CalculatorModel {
         }
         return a / b
     }
-
 }
