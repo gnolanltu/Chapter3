@@ -10,19 +10,19 @@ import XCTest
 @testable import Calculator
 
 class CalculatorTests: XCTestCase {
-    
+
     let resCalc = CalculatorModel()
-    
+
 
     func testAdd() {
-        XCTAssertEqual(resCalc.add(1, 1),2)
-        XCTAssertEqual(resCalc.add(1, 2),3)
-        XCTAssertEqual(resCalc.add(5, 4),9)
+        XCTAssertEqual(resCalc.add(1, 1), 2)
+        XCTAssertEqual(resCalc.add(1, 2), 3)
+        XCTAssertEqual(resCalc.add(5, 4), 9)
     }
-    
+
     func testDivideByZero() {
-        XCTAssertEqual(resCalc.div(0, 0),0)
-        
-    }    
-    
+        XCTAssertEqual(resCalc.div(0, 0), 0)
+
+    }
+
 }

@@ -11,14 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var resultsFld: UITextField!
-    
+
     var res = Int()
     var num = Int()
     var op = String()
-    
+
     let resCalc = CalculatorModel()
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         op = "="
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func operation(_ sender: UIButton) {
-        
+
         switch op {
 
             case "=":
@@ -51,20 +51,20 @@ class ViewController: UIViewController {
                 res = resCalc.div(res, num)
             default:
                 print("error")
-        
+
         }
-        
+
         num = 0
         resultsFld.text = ("\(res)")
-        
+
         if(sender.titleLabel!.text == "=") {
             res = 0
         }
-        
+
         op = sender.titleLabel!.text! as String!
-        
+
     }
-    
+
     @IBAction func clear(_ sender: UIButton) {
         res = 0
         num = 0
@@ -72,4 +72,3 @@ class ViewController: UIViewController {
         resultsFld.text = ("\(res)")
     }
 }
-
